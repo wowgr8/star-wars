@@ -11,3 +11,20 @@ body{
   overflow: hidden;
   background-image: url("../img/star-background.jpeg");
 }
+
+.header{
+  width: 80%;
+  position: sticky;
+  margin: 20px auto;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+}
+
+.logo{
+  flex-basis: 20%;
+}
+
+.logo img{
+  width: 150px;
+}
