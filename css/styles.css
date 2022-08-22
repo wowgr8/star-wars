@@ -4,6 +4,9 @@ body{
   font-family: sans-serif;
   background-image: url("../img/star-background.jpeg");
   background-color: black;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .main{
@@ -14,12 +17,15 @@ body{
 }
 
 .header{
-  width: 80%;
+  width: 1000%;
+  /* width: 200px;  */
   position: sticky;
-  margin: 20px auto;
+  /* padding: 10px; */
+  margin: auto;
   z-index: 1;
   display: flex;
   align-items: center;
+  background: black;
 }
 
 .logo{
@@ -28,4 +34,18 @@ body{
 
 .logo img{
   width: 150px;
+}
+.footer{
+  background: black;
+  padding: 1px 20px;
+}
+
+.container{
+  margin: 15%;
+  min-height: 150px;
+  border: 5px solid gold;
+  padding: 2%;  
+}
+.container p{
+  color: white;
 }
