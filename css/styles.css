@@ -41,11 +41,14 @@ body{
 }
 
 .container{
-  margin: 15%;
-  min-height: 150px;
+  margin-top: 10%;
+  /* min-height: 150px; */
   border: 5px solid gold;
   padding: 2%;  
 }
 .container p{
+  color: black;
+}
+.container h1{
   color: white;
 }
