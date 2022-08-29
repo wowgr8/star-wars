@@ -19,8 +19,8 @@ function Species() {
   // Gets each species' homeworld and compares to the user selected homeworld. If there's a match, they are set to a useState array. 
   const getSpeciesFromPlanet = () => {
     const list = [];
-    speciesData.results.map((being)=>{   // will soon replaced with: selectedPlanet - for dev purposes. (Character list is limited to 10. This ensures conditional can properly be tested.)
-      if(being.homeworld === "https://swapi.dev/api/planets/24e/" || being.homeworld ===  "https://swapi.dev/api/planets/29e/"){ 
+    speciesData.results.map((being)=>{   // will soon replaced with: selectedPlanet - for dev purposes. (Character list is limited to 10. This ensures conditional statement is properly be tested.)
+      if(being.homeworld === "https://swapi.dev/api/planets/24/" || being.homeworld ===  "https://swapi.dev/api/planets/29/"){ 
         list.push(being.name);
         setSpeciesFromPlanetList(list);
       } else {
