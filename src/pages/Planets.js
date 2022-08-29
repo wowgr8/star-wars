@@ -57,7 +57,7 @@ function Planets() {
                 </tr>
                 <tr>
                   <td>Species: </td>
-                  <td onClick={handleShowSpecies}>Click to see species from this character's planet.</td>
+                  <td onClick={handleShowSpecies} className="hover:text-sky-400">Click to see species from this character's planet.</td>
                 </tr>
               </tbody>
             </table>
