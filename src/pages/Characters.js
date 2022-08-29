@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import axios from 'axios';
+import { Context } from '../utils/Context';
 
 function Characters() {
   const [ peopleData, setPeopleData ] = useState();
   const [ characterList, setCharacterList ] = useState([]);
-  const [ selectedPlanet, setSelectedPlanet ] = useState();
+
+  const { selectedPlanet, setSelectedPlanet } = useContext(Context);
   
   useEffect(()=> {
     getPeopleData()
