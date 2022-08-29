@@ -148,8 +148,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ## Known Bugs <a id="bugs"></a>
 
 * _WIP - Character list is currently limited to 10 characters. _
-* _WIP - You are sent back to the home page upon refreshing. Will be updated so you remain on the current page. _
-
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)
 
