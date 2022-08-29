@@ -14,7 +14,7 @@ import {
 
 function App() {
   return (
-    <div className="hero h-screen" style={{ backgroundImage:`url(${bgImage})`}}>
+    <div className="hero h-screen justify-between w-full" style={{ backgroundImage:`url(${bgImage})`}}>
       <Router>
         <Header />
         <Routes>

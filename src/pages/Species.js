@@ -35,7 +35,7 @@ function Species() {
   },[speciesData])
 
   return (
-    <div className=" grid place-items-center block p-1 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+    <div className="grid place-items-center w-full block p-1 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
       <div className='text-red-500'>Species</div>
       {speciesData ? <>
         {speciesFromPlanetList.map((x, i)=>{

@@ -5,7 +5,7 @@ function Control() {
   const { currentView } = useContext(Context);
 
   return (
-    <div className="container py-40 mx-auto border-4 border-solid border-yellow-300">
+    <div className="container -mt-6 py-20 mx-auto border-4 border-solid border-yellow-300">
       <div >
         {currentView}
       </div>
