@@ -13,7 +13,7 @@ function Characters() {
     getPeopleData()
   }, [])
 
-  // Creates GET request for an object of people. Error handling by Axios
+  // Creates GET request for an object of people. Error handling by Axios.
   const getPeopleData = async () =>{
     const data = await axios.get("https://swapi.dev/api/people/");
     setPeopleData(data.data);
@@ -29,7 +29,7 @@ function Characters() {
     setCharacterList(peopleData.results);
   }
 
-  // function with onclick handler. Gets character homeworld. Navigates to planet.js with that state. which is used in the getPlanet api call...
+  // Gets character homeworld. Navigates to planet.js with homeworld in state - used in getPlanet() api call.
   const handleOnCharacterSelect = (value) => {
     {characterList.map((character)=>{ 
       if (character.name === value){
