@@ -19,13 +19,12 @@ function Species() {
   // Gets each species' homeworld and compares to the user selected homeworld. If there's a match, they are set to a useState array. 
   const getSpeciesFromPlanet = () => {
     const list = [];
-    speciesData.results.map((being)=>{   // will soon replaced with: selectedPlanet - for dev purposes. (Character list is limited to 10. This ensures conditional statement is properly be tested.)
+    speciesData.results.map((being)=>{   // URL's will soon be replaced with: selectedPlanet.(Character list is limited to 10. This ensures conditional statement is functional - for dev purposes.)
       if(being.homeworld === "https://swapi.dev/api/planets/24/" || being.homeworld ===  "https://swapi.dev/api/planets/29/"){ 
         list.push(being.name);
-        setSpeciesFromPlanetList(list);
-      } else {
-        setSpeciesFromPlanetList(["No matching species - Try another character!"]);
-      }
+        console.table(being.homeworld, being)
+        return setSpeciesFromPlanetList(list);
+      } 
     })
   }
 
@@ -36,13 +35,13 @@ function Species() {
   },[speciesData])
 
   return (
-    <div class=" grid place-items-center block p-1 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+    <div className=" grid place-items-center block p-1 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
       <div className='text-red-500'>Species</div>
       {speciesData ? <>
-        {speciesFromPlanetList.map((x)=>{
+        {speciesFromPlanetList.map((x, i)=>{
           return( 
-            <ul>
-              <li>{x}</li>
+            <ul key={i}>
+              <li >{x}</li>
             </ul>
             )
         })}
