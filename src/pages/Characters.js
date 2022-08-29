@@ -1,12 +1,15 @@
 import React, { useEffect, useState, useContext } from 'react';
 import axios from 'axios';
 import { Context } from '../utils/Context';
+import Planets from './Planets';
 
 function Characters() {
   const [ peopleData, setPeopleData ] = useState();
   const [ characterList, setCharacterList ] = useState([]);
 
-  const { selectedPlanet, setSelectedPlanet } = useContext(Context);
+  const { selectedPlanet, setSelectedPlanet,
+          setCurrentView 
+        } = useContext(Context);
   
   useEffect(()=> {
     getPeopleData()
@@ -39,6 +42,7 @@ function Characters() {
       if (character.name === value){
         console.log(character.homeworld, " Line 60())()")
         setSelectedPlanet(character.homeworld);
+        setCurrentView(<Planets />)
       }
     })}
   }
