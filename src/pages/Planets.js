@@ -5,6 +5,7 @@ import Species from './Species';
 
 function Planets() {
   const [ planetData, setPlanetData ] = useState();
+  const [ viewSpecies, setViewSpecies ] = useState(false);
   // const [ characterList, setCharacterList ] = useState([]);
 
   const { selectedPlanet, setCurrentView } = useContext(Context);
@@ -35,7 +36,6 @@ function Planets() {
   //   // console.log(characterList)
   // }
 
-  // function with onclick handler. Gets character homeworld. Navigates to planet.js with that state. which is used in the getPlanet api call...
   // const handleOnCharacterSelect = (value) => {
   //   console.log(value);
   //   // loop through list of characters. Find match to the selected value by name. if match setplanet to character.homeworld.
@@ -48,18 +48,16 @@ function Planets() {
   //   })}
   // }
 
-  // useEffect(()=> {
-  //   if(selectedPlanet){
-  //     console.log("PLANET SELECTED")
-  //     console.log(selectedPlanet)
 
-  //   }
-  // }, [selectedPlanet])
+
+  const handleShowSpecies = () => {
+    setViewSpecies(prev => !prev)
+  }
 
   return (
     <div className='container mx-auto text-gray-50 pl-40'>
       <p>HomeWorld Details!</p>
-        {planetData ? 
+        {planetData ? <>
           <div class="block p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{planetData.name}</h5>
             <table className="table-auto">
@@ -80,9 +78,14 @@ function Planets() {
                   <td>Climate: </td>
                   <td>{planetData.climate}</td>
                 </tr>
+                <tr>
+                  <td>Species: </td>
+                  <td onClick={handleShowSpecies}>Click to see species from this character's planet.</td>
+                </tr>
               </tbody>
             </table>
-          </div>
+          </div>  
+          {viewSpecies ? <Species planetData={planetData} /> : null } </>
         : 
           "....Loading" 
         }
