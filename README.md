@@ -10,7 +10,7 @@
 
 ## Previews <a id="previews"></a>
 
-![](https://github.com/wowgr8/help-queue-v2/blob/main/src/img/star-wars-gif.gif)
+![](https://github.com/wowgr8/personal-portfolio/blob/main/src/assets/gif/SWAPI.gif)
 
 
 
