@@ -48,7 +48,7 @@ function Species() {
       if (list.length > 0){
         return setSpeciesFromPlanetList(list);
       } else{
-        return setSpeciesFromPlanetList(["No known Species on this home world - please select another character!"]);
+        return setSpeciesFromPlanetList(["No known species on this world - please select another character!"]);
       }
     })
   }
